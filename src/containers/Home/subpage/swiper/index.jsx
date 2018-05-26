@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import ReactSwipe from 'react-swipe';
 import SwipePage from './subpage/index.jsx';
+import axios from 'axios';
 import './index.scss';
 class Swiper extends Component {
     constructor(){
         super();
         this.requireContext = require.context("../../images",true, /^\.\/.*\.png$/);  
-        this.projectImgs = this.requireContext.keys().map(this.requireContext);  
+        this.swipeImages = this.requireContext.keys().map(this.requireContext);  
+        
         this.imagesAddress='../../images/';
+        // json数据
         this.universalLink=[];
         this.universalLink[0]=[
             {
@@ -87,13 +90,40 @@ class Swiper extends Component {
                 english: 'food'
             },
         ];
+        var xhr=new XMLHttpRequest();
+        xhr.open('get','./index.json');
+        xhr.onreadystatechange=() => {
+            if(xhr.readyState===4 && xhr.status===200){
+                console.log(1);
+                console.log(xhr.response);
+                console.log(xhr.responseText);
+            }
+        }
+        xhr.send(null);
+    }
+    componentDidMount(){
+        // axios.get('./index.json')
+        // .then(res => {
+        //     console.log(res);
+        // })
+        // .catch(err => {
+        //     console.log(err);
+        // });
+        // var xhr=new XMLHttpRequest();
+        // xhr.open('get','./index.json');
+        // xhr.onreadystatechange=() => {
+        //     if(xhr.readyState===4 && xhr.status===200){
+        //         console.log(xhr.responseText);
+        //     }
+        // }
+        // xhr.send(null);
     }
     render() {
         return (
             <ReactSwipe classNmae="carousel"
                 swipeOptions={{continuous: true}}
             >
-                <img src={this.projectImgs[0]} alt=""/>
+                {/* <img src={this.swipeImages[0]} alt=""/> */}
                 <div>
                     <SwipePage data={this.universalLink[0]}/>
                 </div>
