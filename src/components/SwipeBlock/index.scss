@@ -1,0 +1,9 @@
+@import '../../App.scss';
+.swipe-block{
+    flex: 1;
+    border:1px solid yellowgreen;
+    div{
+        width: pxToRem(100);
+        height: pxToRem(100);
+    }
+}

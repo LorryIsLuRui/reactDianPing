@@ -7,7 +7,7 @@ class Header extends Component {
                 <span>西安</span>
                 <i className="iconfont icon-jiantou"></i>
                 <input type="text" placeholder="输入商户名、地点"/>
-                <span className="iconfont icon-ren2"></span>
+                <i className="iconfont icon-ren2"></i>
             </div>
         );
     }

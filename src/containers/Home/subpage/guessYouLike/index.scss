@@ -1,0 +1,38 @@
+@import '../../../../App.scss';
+
+.guess-you-like-wrap{
+    width:100%;
+    .guess-you-like-block{
+        width:100%;
+        height: pxToRem(100);
+        background-color: aquamarine;
+        margin-bottom: pxToRem(20);
+        .left,.right{
+            display: inline-block;
+            height: 100%;
+        }
+        .left{
+            &.image{
+                    width: 30%;
+                    box-sizing: border-box;
+                    padding-right: pxToRem(20);
+                    border: 1px solid red;
+                    padding: pxToRem(5);
+            }
+        }
+        .right{
+            width: 70%;
+            .value{
+            
+            }
+            .desc{
+                font-size: pxToRem(10);
+                color: #666;
+            }
+            .price{
+                color: red;
+                font-weight: 1000;
+            }
+        }
+    }
+}
