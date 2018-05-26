@@ -1,0 +1,9 @@
+
+
+// 声明px =》 sass
+$baseFontSize:      10 !default;        
+
+// pixels to rems 
+@function pxToRem($px) {
+  @return $px / $baseFontSize * 1rem;
+}

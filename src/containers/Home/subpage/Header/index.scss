@@ -1,0 +1,45 @@
+@import '../../../../App.scss';
+@import '../../../../assets/styles/iconfont.css';
+// 10px=1rem  1px=0.1rem
+.container{
+    position: relative;
+    width: 100%;
+    height: pxToRem(30);
+    line-height:0.7;
+    background-color: #f63;
+    color: white;
+    font-size: pxToRem(11);
+    padding: pxToRem(5);
+    padding-top: pxToRem(7.5);
+    box-sizing: border-box;
+    font-weight: 500;
+    .iconfont{
+        display: inline-block;
+        margin:0rem 0.5rem;
+        box-sizing: border-box;
+        &:hover{
+            color: beige;
+            cursor: pointer;    
+        }
+        &.icon-ren2{
+            position: absolute;
+            width: pxToRem(20);
+            height: pxToRem(20);
+            margin-top: pxToRem(3);
+            font-size: pxToRem(19);
+        }
+        &.icon-jiantou{
+            margin-right: pxToRem(16);
+        }
+    }
+    input{
+        width: pxToRem(130);
+        height: pxToRem(15);
+        border-radius: pxToRem(5);
+        outline: none;
+        box-sizing: border-box;
+        padding-left: pxToRem(5);
+        margin-right: pxToRem(5);
+        border: none;
+    }
+}
