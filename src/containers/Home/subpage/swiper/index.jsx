@@ -12,117 +12,34 @@ class Swiper extends Component {
         this.imagesAddress='../../images/';
         // json数据
         this.universalLink=[];
-        this.universalLink[0]=[
-            {
-                id: '11',
-                content: '美食',
-                imgUrl: 'require('+this.imagesAddress+'swipe-food.png'+')',
-                english: 'food'
-            },
-            {
-                id: '12',
-                content: '猫眼电影',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-            {
-                id: '13',
-                content: '酒店',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-            {
-                id: '14',
-                content: '休闲娱乐',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-        ];
-        this.universalLink[1]=[
-            {
-                id: '21',
-                content: '婚纱摄影',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-            {
-                id: '22',
-                content: '生活服务',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-            {
-                id: '23',
-                content: '景点',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-            {
-                id: '24',
-                content: '爱车',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-        ];
-        this.universalLink[2]=[
-            {
-                id: '31',
-                content: '小吃快餐',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-            {
-                id: '32',
-                content: '自助餐',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-            {
-                id: '33',
-                content: '美发',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-            {
-                id: '34',
-                content: '美甲美瞳',
-                imgUrl: this.imagesAddress+'swipe-food.png',
-                english: 'food'
-            },
-        ];
-        var xhr=new XMLHttpRequest();
-        xhr.open('get','./index.json');
-        xhr.onreadystatechange=() => {
-            if(xhr.readyState===4){
-                if(xhr.status===200 || xhr.status===304){
-                    console.log(1);
-                console.log(xhr.response);
-                console.log(xhr.responseText);
-                }
-            }
-        }
-        xhr.send(null);
+        this.state={
+            haveData:false,
+        };
+        console.log('constructor');
+        axios.get('http://localhost:3000/mock/swipe/index.json')
+        .then(res => {
+            let data=JSON.parse(res.request.response);
+            // data.keys()
+            Object.keys(data).map((value,index) => {
+                this.universalLink.push(data[value]);
+            });
+            this.setState({haveData:true});
+            // this.haveData=true;
+            console.log(this.universalLink);
+        })
+        .catch(err => {
+            console.log(err);
+        });
     }
     componentDidMount(){
-        // axios.get('./index.json')
-        // .then(res => {
-        //     console.log(res);
-        // })
-        // .catch(err => {
-        //     console.log(err);
-        // });
-        // var xhr=new XMLHttpRequest();
-        // xhr.open('get','./index.json');
-        // xhr.onreadystatechange=() => {
-        //     if(xhr.readyState===4 && xhr.status===200){
-        //         console.log(xhr.responseText);
-        //     }
-        // }
-        // xhr.send(null);
+        console.log('componentDidMount');
     }
     render() {
+        console.log(this.state.haveData);
+        // console.log(Object.keys(this.universalLink));
         return (
-            <ReactSwipe classNmae="carousel"
+            !this.state.haveData ? 'loading' :  (
+                <ReactSwipe classNmae="carousel"
                 swipeOptions={{continuous: true}}
             >
                 {/* <img src={this.swipeImages[0]} alt=""/> */}
@@ -136,6 +53,7 @@ class Swiper extends Component {
                     <SwipePage data={this.universalLink[2]}/>
                 </div>
             </ReactSwipe>
+            )
         );
     }
 }
