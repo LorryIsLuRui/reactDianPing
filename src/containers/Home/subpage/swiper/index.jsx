@@ -93,10 +93,12 @@ class Swiper extends Component {
         var xhr=new XMLHttpRequest();
         xhr.open('get','./index.json');
         xhr.onreadystatechange=() => {
-            if(xhr.readyState===4 && xhr.status===200){
-                console.log(1);
+            if(xhr.readyState===4){
+                if(xhr.status===200 || xhr.status===304){
+                    console.log(1);
                 console.log(xhr.response);
                 console.log(xhr.responseText);
+                }
             }
         }
         xhr.send(null);
