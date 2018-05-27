@@ -12,8 +12,8 @@ class SpecialValue extends Component {
                    return (
                        <div className="special-value-block" key={value}>
                             <div className="img"></div>
-                            <p>{value}</p>
-                            <p>￥</p>
+                            <p className="value">{value}</p>
+                            <p className="price">￥100</p>
                        </div>
                    )
                })}

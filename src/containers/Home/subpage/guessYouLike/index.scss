@@ -4,7 +4,7 @@
     width:100%;
     .guess-you-like-block{
         width:100%;
-        height: pxToRem(100);
+        height: pxToRem(60);
         background-color: aquamarine;
         margin-bottom: pxToRem(20);
         .left,.right{
@@ -22,11 +22,16 @@
         }
         .right{
             width: 70%;
+            overflow: hidden;
+            p{
+                margin: pxToRem(6);
+            }
             .value{
-            
+                font-weight: 900;
+                font-size: pxToRem(10);
             }
             .desc{
-                font-size: pxToRem(10);
+                font-size: pxToRem(8);
                 color: #666;
             }
             .price{

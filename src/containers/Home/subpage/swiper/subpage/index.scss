@@ -1,4 +1,8 @@
 .swipe-page{
     display: flex;
     overflow: hidden;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }

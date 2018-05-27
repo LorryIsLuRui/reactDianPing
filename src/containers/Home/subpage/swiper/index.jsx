@@ -14,17 +14,16 @@ class Swiper extends Component {
         this.universalLink=[];
         this.state={
             haveData:false,
+            url:'http://localhost:3000/',
         };
         console.log('constructor');
-        axios.get('http://localhost:3000/mock/swipe/index.json')
+        axios.get(this.state.url+'mock/swipe/index.json')
         .then(res => {
             let data=JSON.parse(res.request.response);
-            // data.keys()
             Object.keys(data).map((value,index) => {
                 this.universalLink.push(data[value]);
             });
             this.setState({haveData:true});
-            // this.haveData=true;
             console.log(this.universalLink);
         })
         .catch(err => {
@@ -36,13 +35,11 @@ class Swiper extends Component {
     }
     render() {
         console.log(this.state.haveData);
-        // console.log(Object.keys(this.universalLink));
         return (
             !this.state.haveData ? 'loading' :  (
                 <ReactSwipe classNmae="carousel"
                 swipeOptions={{continuous: true}}
             >
-                {/* <img src={this.swipeImages[0]} alt=""/> */}
                 <div>
                     <SwipePage data={this.universalLink[0]}/>
                 </div>
