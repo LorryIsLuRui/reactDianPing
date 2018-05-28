@@ -16,49 +16,49 @@
             "id":13,
             "content":"酒店",
             "english":"hotel",
-            "img":"swipe-hotel"
+            "img":"swipe-hotel.png"
         },
         {
             "id":14,
             "content":"休闲娱乐",
             "english":"interest",
-            "img":"swipe-interest"
+            "img":"swipe-interest.png"
         },
         {
             "id":15,
             "content":"外卖",
             "english":"waimai",
-            "img":"swipe-waimai"
+            "img":"swipe-waimai.png"
         },
         {
             "id":16,
             "content":"火锅",
             "english":"hotpot",
-            "img":"swipe-hotpot"
+            "img":"swipe-hotpot.png"
         },
         {
             "id":17,
             "content":"丽人",
             "english":"liren",
-            "img":"swipe-liren"
+            "img":"swipe-liren.png"
         },
         {
             "id":18,
             "content":"购物",
             "english":"shop",
-            "img":"swipe-shop"
+            "img":"swipe-shop.png"
         },
         {
-            "id":17,
+            "id":19,
             "content":"周边游",
             "english":"aroundplay",
-            "img":"swipe-aroundplay"
+            "img":"swipe-aroundplay.png"
         },
         {
-            "id":18,
+            "id":20,
             "content":"KTV",
             "english":"ktv",
-            "img":"swipe-ktv"
+            "img":"swipe-ktv.png"
         }
     ],
     "swipePageTwo":[
@@ -66,61 +66,61 @@
             "id":21,
             "content":"婚纱摄影",
             "english":"food",
-            "img":"swipe-wedding"
+            "img":"swipe-wedding.png"
         },
         {
             "id":22,
             "content":"生活服务",
             "english":"lifeserve",
-            "img":"swipe-lifeserve"
+            "img":"swipe-lifeserve.png"
         },
         {
             "id":23,
             "content":"景点",
             "english":"scenary",
-            "img":"swipe-scenary"
+            "img":"swipe-scenary.png"
         },
         {
             "id":24,
             "content":"爱车",
             "english":"car",
-            "img":"swipe-car"
+            "img":"swipe-car.png"
         },
         {
             "id":25,
             "content":"运动健身",
             "english":"health",
-            "img":"swipe-health"
+            "img":"swipe-health.png"
         },
         {
             "id":26,
             "content":"亲子",
             "english":"child",
-            "img":"swipe-child"
+            "img":"swipe-child.png"
         },
         {
             "id":27,
             "content":"家装",
             "english":"jiazhuang",
-            "img":"swipe-jiazhuang"
+            "img":"swipe-jiazhuang.png"
         },
         {
             "id":28,
             "content":"学习培训",
             "english":"studytrain",
-            "img":"swipe-studytrain"
+            "img":"swipe-studytrain.png"
         },
         {
-            "id":28,
+            "id":29,
             "content":"医疗健康",
             "english":"yiliaojiankang",
-            "img":"swipe-yiliaojiankang"
+            "img":"swipe-yiliaojiankang.png"
         },
         {
-            "id":28,
+            "id":30,
             "content":"到家",
             "english":"gohome",
-            "img":"swipe-gohome"
+            "img":"swipe-gohome.png"
         }
     ],
     "swipePageThree":[
@@ -128,61 +128,61 @@
             "id":31,
             "content":"小吃快餐",
             "english":"eat",
-            "img":"swipe-eat"
+            "img":"swipe-eat.png"
         },
         {
             "id":32,
             "content":"自助餐",
             "english":"zizhucan",
-            "img":"swipe-zizhucan"
+            "img":"swipe-zizhucan.png"
         },
         {
             "id":33,
             "content":"美发",
             "english":"hair",
-            "img":"swipe-hair"
+            "img":"swipe-hair.png"
         },
         {
             "id":34,
             "content":"美甲美睫",
             "english":"eye",
-            "img":"swipe-eye"
+            "img":"swipe-eye.png"
         },
         {
             "id":35,
             "content":"美容SPA",
             "english":"meirongspa",
-            "img":"swipe-meirongspa"
+            "img":"swipe-meirongspa.png"
         },
         {
             "id":36,
             "content":"瘦身纤体",
             "english":"shoushenxianti",
-            "img":"swipe-shoushenxianti"
+            "img":"swipe-shoushenxianti.png"
         },
         {
             "id":37,
             "content":"亲子摄影",
             "english":"qinzisheying",
-            "img":"swipe-qinzisheying"
+            "img":"swipe-qinzisheying.png"
         },
         {
             "id":38,
             "content":"亲子游乐",
             "english":"qinziplay",
-            "img":"swipe-qinziplay"
+            "img":"swipe-qinziplay.png"
         },
         {
-            "id":38,
+            "id":39,
             "content":"幼儿教育",
             "english":"childedu",
-            "img":"swipe-childedu"
+            "img":"swipe-childedu.png"
         },
         {
-            "id":38,
+            "id":40,
             "content":"全部分类",
             "english":"all",
-            "img":"swipe-all"
+            "img":"swipe-all.png"
         }
     ]
 }

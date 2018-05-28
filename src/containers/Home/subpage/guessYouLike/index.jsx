@@ -1,26 +1,46 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './index.scss';
 class GuessYouLike extends Component {
     constructor(){
         super();
-        this.arr=['牛一嘴','华莱士','百富烤霸','黑面菜','罗小胖柳州螺狮畈','小蹄大作','一只酸奶牛','太平洋咖啡'];
+        this.arr=[];
+        this.state={
+            haveData:false,
+            url:'http://localhost:3000/',
+        };
+    }
+    componentDidMount(){
+        axios.get(this.state.url+'mock/guessYouLike/index.json')
+        .then((res) => {
+            var data=JSON.parse(res.request.response);
+            Object.keys(data).map((value,index) => {
+                this.arr.push(data[value]);
+            });
+            this.setState({haveData:true});
+        })
+        .catch((res) => {
+            console.log(res);
+        });
     }
     render() {
         return (
-            <div className="guess-you-like-wrap">
+            !this.state.haveData?'loading':(
+                <div className="guess-you-like-wrap">
                {this.arr.map((value,index) => {
                    return (
-                       <div className="guess-you-like-block" key={value}>
-                            <div className="image left"></div>
+                       <div className="guess-you-like-block" key={value.id}>
+                                <img src={'/images/'+value.img} alt={value.english} className="image left"/>
                             <div className="right">
-                                <p className="value">{value}</p>
-                                <p className="desc">desc</p>
-                                <p className="price">￥</p>
+                                <p className="value">{value.content}</p>
+                                <p className="desc">{value.desc}</p>
+                                <p className="price">￥{value.price}</p>
                             </div>
                        </div>
                    )
                })}
             </div>
+            )
         );
     }
 }

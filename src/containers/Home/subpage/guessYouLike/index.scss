@@ -5,8 +5,10 @@
     .guess-you-like-block{
         width:100%;
         height: pxToRem(60);
-        background-color: aquamarine;
-        margin-bottom: pxToRem(20);
+        // background-color: aquamarine;
+        border-bottom: 1px solid #eee;
+        margin-bottom: pxToRem(10);
+        padding-bottom: pxToRem(10);
         .left,.right{
             display: inline-block;
             height: 100%;
@@ -16,7 +18,7 @@
                     width: 30%;
                     box-sizing: border-box;
                     padding-right: pxToRem(20);
-                    border: 1px solid red;
+                    // border: 1px solid red;
                     padding: pxToRem(5);
             }
         }

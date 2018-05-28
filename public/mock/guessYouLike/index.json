@@ -1,0 +1,58 @@
+{
+    "niuyizui":{
+        "id":1,
+        "content":"牛一嘴·",
+        "img":"niuyizui.jpg",
+        "english":"niuyizui",
+        "desc":"[3店通用] 单人餐，提供免费WIFI",
+        "price":"  9.9"
+    },
+    "baifukaoba":{
+        "id":2,
+        "content":"百富烤霸",
+        "img":"baifukaoba.jpg",
+        "english":"baifukaoba",
+        "desc":"[7店通用] 烤鸡堡单人餐，提供免费WIFI",
+        "price":"  19"
+    },
+    "heimiancai":{
+        "id":3,
+        "content":"黑面菜",
+        "img":"heimiancai.jpg",
+        "english":"heimiancai",
+        "desc":"[3店通用] 饮品16选1，提供免费WIFI",
+        "price":"  8.8"
+    },
+    "xiaotidazuo":{
+        "id":4,
+        "content":"小蹄大作",
+        "img":"xiaotidazuo.jpg",
+        "english":"xiaotidazuo",
+        "desc":"[2店通用] 小吃3选1，提供免费WIFI",
+        "price":"  10.8"
+    },
+    "miqi":{
+        "id":5,
+        "content":"米琪",
+        "img":"miqi.jpg",
+        "english":"miqi",
+        "desc":"肉粽八宝粥，仅限自提，不提供配送",
+        "price":"  10.8"
+    },
+    "yizhisuannai":{
+        "id":4,
+        "content":"一只酸奶",
+        "img":"yizhisuannai.jpg",
+        "english":"yizhisuannai",
+        "desc":"[23店通用] 酸奶牛紫米露3选1",
+        "price":"  9.98"
+    },
+    "luosifen":{
+        "id":4,
+        "content":"罗小胖柳州螺蛳粉",
+        "img":"luosifen.jpg",
+        "english":"luosifen",
+        "desc":"[3店通用] 柳州螺蛳粉一份，提供免费WIFI",
+        "price":"  10.8"
+    }
+}

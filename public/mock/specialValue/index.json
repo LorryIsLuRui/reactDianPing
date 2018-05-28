@@ -1,0 +1,24 @@
+{
+    "hamburger":{
+        "id":1,
+        "content":"汉堡王",
+        "img":"hamburger.jpg",
+        "english":"hamburger",
+        "price":"10"
+    },
+    "mixian":{
+        "id":2,
+        "content":"大鼓米线",
+        "img":"mixian.jpg",
+        "english":"mixian",
+        "price":"9.5"
+    },
+    "cake":{
+        "id":3,
+        "content":"优点蛋糕",
+        "img":"cake.jpg",
+        "english":"cake",
+        "price":"2.5"
+    }
+
+}

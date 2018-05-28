@@ -1,18 +1,19 @@
 @import '../../../../App.scss';
 .special-value-block{
     width: 33.33333%;
-    height: pxToRem(100);
-    border: 1px solid red;
+    height: pxToRem(120);
+    padding: pxToRem(10);
     box-sizing: border-box;
     display: inline-block;
+    // margin-bottom: pxToRem(20);
     p{
         margin: 0;
     }
     .img{
         width: 100%;
         height: pxToRem(70);
-        border:1px solid red;
         box-sizing: border-box;
+        cursor: pointer;
     }
     .value{
         font-size: pxToRem(9);

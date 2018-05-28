@@ -1,17 +1,25 @@
 @import '../../App.scss';
-.swipe-block{
-    border:1px solid yellowgreen;
+.swipe-block-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20%;
-        box-sizing: border-box;
-    img{
-        // 图片
-        display: inline-block;
-        width: 100%;
-        height: pxToRem(40);
-        margin: 0 auto;
-    }
-    p{
-        font-size: pxToRem(7.9);
-        text-align: center;
+    box-sizing: border-box;
+    // border:1px solid yellowgreen;
+    padding-top: pxToRem(5);
+    padding-bottom: pxToRem(10);
+    .swipe-block{
+        img{
+            // 图片
+            display: inline-block;
+            width: pxToRem(34);
+            height: pxToRem(34);
+            margin: 0 auto;
+        }
+        p{
+            font-size: pxToRem(7.9);
+            text-align: center;
+            margin: 0;
+        }
     }
 }

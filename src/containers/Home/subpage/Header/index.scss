@@ -27,13 +27,14 @@
             height: pxToRem(20);
             margin-top: pxToRem(3);
             font-size: pxToRem(19);
+            right: pxToRem(10);
         }
         &.icon-jiantou{
             margin-right: pxToRem(16);
         }
     }
     input{
-        width: pxToRem(130);
+        width: pxToRem(100);
         height: pxToRem(15);
         border-radius: pxToRem(5);
         outline: none;
