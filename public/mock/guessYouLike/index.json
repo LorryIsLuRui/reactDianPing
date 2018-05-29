@@ -40,7 +40,7 @@
         "price":"  10.8"
     },
     "yizhisuannai":{
-        "id":4,
+        "id":6,
         "content":"一只酸奶",
         "img":"yizhisuannai.jpg",
         "english":"yizhisuannai",
@@ -48,7 +48,7 @@
         "price":"  9.98"
     },
     "luosifen":{
-        "id":4,
+        "id":7,
         "content":"罗小胖柳州螺蛳粉",
         "img":"luosifen.jpg",
         "english":"luosifen",

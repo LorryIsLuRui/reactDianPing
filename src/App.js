@@ -1,14 +1,31 @@
 import React, { Component } from 'react';
-import Header from './containers/Home/index.jsx';
+import Page from './containers/index.jsx';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import * as userInfoActionsFromOtherFile from './actions/userinfo.js';
+
 // import './App.scss';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header/>
+        <Page/>
       </div>
     );
   }
 }
-export default App;
+function mapStateToProps(state){
+  return {
+    userinfo:state.userinfo
+  };
+}
+function mapDispatchToProps(dispatch){
+  return {
+      userInfoActions:bindActionCreators(userInfoActionsFromOtherFile,dispatch)
+  };
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
