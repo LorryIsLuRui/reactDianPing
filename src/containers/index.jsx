@@ -6,9 +6,11 @@ import {connect} from 'react-redux';
 import * as userInfoActionsFromOtherFile from '../actions/userinfo.js';
 import LocalStore from '../util/localStore.js';
 import {CITYNAME} from '../config/localStoreKey.js';
-import Home from './Home/index.jsx'; 
-import City from './City/index.jsx';
-class Page extends Component {
+// import Home from './Home/index.jsx'; 
+// import City from './City/index.jsx';
+// import Search from './Search/index.jsx';
+
+class App extends Component {
     constructor(props){
         super(props);
         this.state={
@@ -16,14 +18,10 @@ class Page extends Component {
         };
     }
     render() {
+        console.log(this.props.children);
         return (
             !this.state.initDone?'loading':(
-                <Router>
-                <div>
-                    <Route exact path="/" component={Home}></Route>
-                    <Route exact path="/city" component={City}></Route>
-                </div>
-            </Router>
+                this.props.children
             )
         );
     }
@@ -31,7 +29,8 @@ class Page extends Component {
         //从localStorage里获取城市，
         let cityName=LocalStore.getItem(CITYNAME);
         if(cityName==null){
-            cityName='西安';
+            cityName='大连';
+            LocalStore.setItem(CITYNAME,cityName);
         }
         //并且存储到redux
         this.props.userInfoActions.update({
@@ -57,4 +56,4 @@ function mapStateToProps(state){
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Page);
+)(App);

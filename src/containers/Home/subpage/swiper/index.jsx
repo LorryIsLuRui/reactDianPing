@@ -16,7 +16,7 @@ class Swiper extends Component {
             haveData:false,
             url:'http://localhost:3000/',
         };
-        console.log('constructor');
+        // console.log('constructor');
         axios.get(this.state.url+'mock/swipe/index.json')
         .then(res => {
             let data=JSON.parse(res.request.response);
@@ -24,17 +24,17 @@ class Swiper extends Component {
                 this.universalLink.push(data[value]);
             });
             this.setState({haveData:true});
-            console.log(this.universalLink);
+            // console.log(this.universalLink);
         })
         .catch(err => {
             console.log(err);
         });
     }
     componentDidMount(){
-        console.log('componentDidMount');
+        // console.log('componentDidMount');
     }
     render() {
-        console.log(this.state.haveData);
+        // console.log(this.state.haveData);
         return (
             !this.state.haveData ? 'loading' :  (
                 <ReactSwipe classNmae="carousel"

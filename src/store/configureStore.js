@@ -6,5 +6,5 @@ export default function configureStore(initialState) {
         // 触发 redux-devtools
         window.devToolsExtension ? window.devToolsExtension() : undefined
     )
-    return store
+    return store;
 }

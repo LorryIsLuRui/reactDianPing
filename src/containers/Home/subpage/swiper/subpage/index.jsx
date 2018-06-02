@@ -7,7 +7,7 @@ class SwipePage extends Component {
             <div className="swipe-page">
                 {this.props.data.map((obj,index) => {
                     return (
-                        <SwipeBlock data={obj} key={obj.id}></SwipeBlock>
+                            <SwipeBlock data={obj} key={obj.id}/>
                     )
                 })}
             </div>

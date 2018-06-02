@@ -12,7 +12,6 @@ class SpecialValue extends Component {
         };
     }
     componentDidMount(){
-        console.log("a");
         axios.get(this.state.url+'mock/specialValue/index.json')
         .then((res) => {
             // console.log(res);
@@ -20,7 +19,7 @@ class SpecialValue extends Component {
             Object.keys(data).map((value,index) => {
                 this.arr.push(data[value]);
             });
-            console.log(this.arr);
+            // console.log(this.arr);
             this.setState({haveData:true});
         })
         .catch((err) => {
@@ -28,7 +27,7 @@ class SpecialValue extends Component {
         });
     }
     render() {
-        console.log(this.state.haveData);
+        // console.log(this.state.haveData);
         return (
             !this.state.haveData?'loading':   
             (
