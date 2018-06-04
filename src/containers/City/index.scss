@@ -1,0 +1,67 @@
+@import '../../App.scss';
+.hot-city-wrap{
+    .choose-city{
+        width: 100%;
+        height:pxToRem(30);
+        text-align: center;
+        line-height: pxToRem(30);
+        box-sizing: border-box;
+        background-color: red;
+        margin: 0;
+    }
+    .hot-city{
+        padding-left: 0.5rem;
+    }
+    .current-city{
+        width: 100%;
+        height:pxToRem(60);
+        text-align: center;
+        line-height: pxToRem(60);
+        box-sizing: border-box;
+        // background-color: yellowgreen;
+        border-bottom: 1px solid #eee;
+        margin: 0;
+        font-size: pxToRem(23);
+        border-bottom: 1px solid #eee;
+    }
+    .hot-city-box{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        div{
+            width: 33.3333%;
+            text-align: center;
+            height: pxToRem(20);
+            line-height: pxToRem(20);
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: all 1s 0.1s ease;
+            &:hover{
+                border: 1px solid #111111;
+            }
+        }
+    }
+    .more-city{
+        margin: pxToRem(5);
+        padding-left: 0.5rem;
+    }
+    .more-city-box{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        div{
+            width: 20%;
+            height: pxToRem(15);
+            box-sizing: border-box;
+            background-color: beige;
+            cursor: pointer;
+            transition: all ease 1s;
+            text-align: center;
+            line-height: pxToRem(15);
+            &:hover{
+                background-color: aquamarine;
+            }
+        }
+    }
+}

@@ -14,6 +14,9 @@
     padding-top: pxToRem(7.5);
     box-sizing: border-box;
     font-weight: 500;
+    .header-city-span{
+        cursor: pointer;
+    }
     .iconfont{
         display: inline-block;
         margin:0rem 0.5rem;
