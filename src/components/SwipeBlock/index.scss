@@ -10,6 +10,8 @@
     padding-bottom: pxToRem(10);
     cursor: pointer;
     .swipe-block{
+        color: #333;
+        font-size: pxToRem(13);
         img{
             // 图片
             display: inline-block;

@@ -6,6 +6,7 @@ import './index.scss';
 import { connect } from 'react-redux'
 import {bindActionCreators} from 'redux';
 import * as userInfoActionsFromOtherFile from '../../actions/userinfo.js';
+import '../../assets/styles/border.css'
 
 class City extends Component {
     constructor(){
@@ -43,15 +44,19 @@ class City extends Component {
     }
     chooseCity = (cityName) => {
         this.props.userInfoActions.update({cityName:cityName});  //update返回action对象
+        this.props.history.push('/');
         // console.log(cityName);
     }
     render() {
         return (
                 <div>
                    <div className="hot-city-wrap">
-                        <Link to={'/'}>huiqu</Link>
-                        <p className="choose-city">选择城市</p>
-                        <p className="current-city">西安</p>
+                        
+                        <p className="choose-city">
+                            <Link to={'/'}><span className="iconfont icon-fanhui float-left"></span></Link>
+                            <span>选择城市</span>
+                        </p>
+                        <p className="current-city border border-bottom">{this.props.userinfo.cityName?this.props.userinfo.cityName:'西安'}</p>
                         <p className="hot-city">热门城市</p>
                         <div className="hot-city-box">
                         {
@@ -67,7 +72,7 @@ class City extends Component {
                         {
                             !this.state.haveData?'loading':(
                                 this.arr['morecity'].map((value,index) => {
-                                    return (<div className="" key={value.id}>{value.content}</div>)
+                                    return (<div className="" key={value.id}><a href={'#'+value.content}>{value.content}</a></div>)
                                 })
                             )
                         }
@@ -77,20 +82,21 @@ class City extends Component {
                             !this.state.haveData?'loading':(
                                 this.arr['cities'].map((value,index) => {//26个元素的数组
                                     //value是首字母集合数组
+                                    console.log(value);
                                     const citiesCol=value.map((value,index) => {
                                         return (<div key={value.id} onClick={this.chooseCity.bind(this,value.name)}>{value.name}</div>)
                                     })
                                     return (
-                                        <div key={index}>
-                                            <p>{this.cityNames[index]}</p>
-                                            <div>{citiesCol}</div>
+                                        <div key={index} className="city-item">
+                                            <p className="city-item-title" id={this.cityNames[index]}>{this.cityNames[index]}</p>
+                                            <div className="city-item-content">{citiesCol}</div>
                                         </div>
                                     )
                                 })
                             )
                         }
                         </div>
-                        
+                        {/* <div className=""go-top>回到顶部</div> */}
                    </div>
                 </div>
         );

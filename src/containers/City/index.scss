@@ -1,4 +1,5 @@
 @import '../../App.scss';
+// @import '../../assets/styles/border.css'
 .hot-city-wrap{
     .choose-city{
         width: 100%;
@@ -6,11 +7,16 @@
         text-align: center;
         line-height: pxToRem(30);
         box-sizing: border-box;
-        background-color: red;
+        background-color: #f63;
         margin: 0;
-    }
-    .hot-city{
-        padding-left: 0.5rem;
+        color: white;
+        overflow: hidden;
+        font-weight: 700;
+        .float-left{
+            float: left;
+            padding-left: pxToRem(3);
+            color: white;
+        }
     }
     .current-city{
         width: 100%;
@@ -19,10 +25,9 @@
         line-height: pxToRem(60);
         box-sizing: border-box;
         // background-color: yellowgreen;
-        border-bottom: 1px solid #eee;
         margin: 0;
         font-size: pxToRem(23);
-        border-bottom: 1px solid #eee;
+        border-color: #eee;
     }
     .hot-city-box{
         width: 100%;
@@ -38,12 +43,13 @@
             box-sizing: border-box;
             transition: all 1s 0.1s ease;
             &:hover{
-                border: 1px solid #111111;
+                border-color:#111111;
             }
         }
     }
-    .more-city{
+    .more-city,.hot-city{
         margin: pxToRem(5);
+        margin-left: 0;
         padding-left: 0.5rem;
     }
     .more-city-box{
@@ -54,13 +60,50 @@
             width: 20%;
             height: pxToRem(15);
             box-sizing: border-box;
-            background-color: beige;
+            // background-color: beige;
             cursor: pointer;
             transition: all ease 1s;
             text-align: center;
             line-height: pxToRem(15);
+            a{
+                width: 100%;
+                height: 100%;
+                color: #333;
+            }
             &:hover{
-                background-color: aquamarine;
+                background-color: #f63;
+                color: white;
+            }
+        }
+    }
+    .all-cities-box{
+        width: 100%;
+        font-size: pxToRem(10);
+        font-weight: 100;
+        color: #110808;
+        .city-item{
+            width: 100%;
+            
+            .city-item-title{
+                padding-left: pxToRem(3);
+                width: 100%;
+                height: pxToRem(20);
+                line-height: pxToRem(20);
+                background-color: #eee;
+                margin-bottom: 0;
+            }
+            .city-item-content{
+                padding-top: pxToRem(10);
+                div{
+                    padding-left: pxToRem(3);
+                    margin-bottom: pxToRem(10);
+                    cursor: pointer;
+                    transition: all 1s ease;
+                    &:hover{
+                        padding-left: pxToRem(10);
+                        color: #f63;
+                    }
+                }
             }
         }
     }

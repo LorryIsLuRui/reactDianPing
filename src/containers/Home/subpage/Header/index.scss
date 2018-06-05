@@ -8,14 +8,15 @@
     height: pxToRem(30);
     line-height:0.7;
     background-color: #f63;
-    color: white;
     font-size: pxToRem(11);
     padding: pxToRem(5);
     padding-top: pxToRem(7.5);
     box-sizing: border-box;
     font-weight: 500;
+    color: #fff;
     .header-city-span{
         cursor: pointer;
+        color: #fff;
     }
     .iconfont{
         display: inline-block;

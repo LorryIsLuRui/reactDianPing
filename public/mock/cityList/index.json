@@ -94,10 +94,6 @@
             "content":"H",
             "id":8
         },
-        "I":{
-            "content":"I",
-            "id":9
-        },
         "J":{
             "content":"J",
             "id":10
@@ -118,10 +114,6 @@
             "content":"N",
             "id":14
         },
-        "O":{
-            "content":"O",
-            "id":15
-        },
         "P":{
             "content":"P",
             "id":16
@@ -141,14 +133,6 @@
         "T":{
             "content":"T",
             "id":20
-        },
-        "U":{
-            "content":"U",
-            "id":21
-        },
-        "V":{
-            "content":"V",
-            "id":22
         },
         "W":{
             "content":"W",
@@ -2230,7 +2214,8 @@
                     "spell": "nongan",
                     "name": "农安"
                 }],
-                "P": [{
+                "P": [
+                    {
                     "id": 216,
                     "spell": "panjin",
                     "name": "盘锦"
@@ -2367,7 +2352,8 @@
                     "spell": "puning",
                     "name": "普宁"
                 }],
-                "Q": [{
+                "Q": [
+                    {
                     "id": 34,
                     "spell": "qingdao",
                     "name": "青岛"
@@ -2512,7 +2498,8 @@
                     "spell": "qujiang",
                     "name": "曲江"
                 }],
-                "R": [{
+                "R": [
+                    {
                     "id": 235,
                     "spell": "rikaze",
                     "name": "日喀则"
@@ -2577,7 +2564,8 @@
                     "spell": "ruyuan",
                     "name": "乳源"
                 }],
-                "S": [{
+                "S": [
+                    {
                     "id": 3,
                     "spell": "shanghai",
                     "name": "上海"
@@ -2898,7 +2886,8 @@
                     "spell": "suyu",
                     "name": "宿豫"
                 }],
-                "T": [{
+                "T": [
+                    {
                     "id": 4,
                     "spell": "tianjin",
                     "name": "天津"
@@ -3051,7 +3040,8 @@
                     "spell": "tongzhou",
                     "name": "通州"
                 }],
-                "W": [{
+                "W": [
+                    {
                     "id": 42,
                     "spell": "weifang",
                     "name": "潍坊"
@@ -3248,7 +3238,8 @@
                     "spell": "wuzhi",
                     "name": "武陟"
                 }],
-                "X": [{
+                "X": [
+                    {
                     "id": 46,
                     "spell": "xiamen",
                     "name": "厦门"
@@ -3489,7 +3480,8 @@
                     "spell": "xuyi",
                     "name": "盱眙"
                 }],
-                "Y": [{
+                "Y": [
+                    {
                     "id": 50,
                     "spell": "yangzhou",
                     "name": "扬州"
@@ -3830,7 +3822,8 @@
                     "spell": "yuzhong",
                     "name": "榆中"
                 }],
-                "Z": [{
+                "Z": [
+                    {
                     "id": 52,
                     "spell": "zhangzhou",
                     "name": "漳州"
