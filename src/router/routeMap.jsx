@@ -19,7 +19,7 @@ class RouterMap extends React.Component {
                 <div>
                     <Route  exact path="/" component={Home}/>
                     <Route  path="/city" component={City}/>
-                    <Route path="/search/:category" component={Search}/> 
+                    <Route path="/search/:category/:keyword?" component={Search}/> 
                      {/* http://localhost:3000/search/:spa */}
                 </div>
             </Router>

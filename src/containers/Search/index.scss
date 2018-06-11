@@ -1,0 +1,75 @@
+@import '../../App.scss';
+.search-wrap{
+    width: 100%;
+    background-color: whitesmoke;
+    padding-bottom: 1rem;
+    .header{
+        display: flex;
+        height: pxToRem(25);
+        align-items: center;
+        background-color: white;
+        padding: pxToRem(5);
+        input{
+            flex: 1;
+            height: pxToRem(24);
+            border-radius: pxToRem(15);
+            outline: none;
+            box-sizing: border-box;
+            padding-left: pxToRem(15);
+            margin-right: pxToRem(5);
+            border: none;
+            background-color: whitesmoke;
+        }
+        .cancel{
+            width: pxToRem(20);
+            cursor: pointer;
+        }
+    }
+    .search-content-wrap{
+        width: 100%;
+        height: pxToRem(89);
+        box-sizing: border-box;
+        padding: pxToRem(6);
+        .search-content-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                text-align: center;
+                background-color: white;
+                flex: 1;
+                border: 1px solid whitesmoke;
+                height: pxToRem(25);
+                line-height: pxToRem(25);
+                cursor: pointer;
+            }
+        }
+    }
+    h4{
+        font-size: pxToRem(9.7);
+        font-weight: 100;
+        padding-left: pxToRem(6);
+        margin: pxToRem(7) 0;
+    }
+    .search-history-list{
+        width: 100%;
+        padding-left:pxToRem(6);
+        background-color: white;
+        li{
+            height:pxToRem(25);
+            line-height:pxToRem(25);
+            border-bottom: 1px solid whitesmoke;
+            list-style: none;
+            cursor: pointer;
+            transition: all 1s ease;
+            &:hover{
+                color: burlywood;
+            }
+        }
+    }
+    h4.clear-search-history{
+        cursor:pointer;
+        text-align: center;
+
+    }
+}

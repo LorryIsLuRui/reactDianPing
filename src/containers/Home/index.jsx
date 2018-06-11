@@ -14,7 +14,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Header cityName={this.props.userinfo.cityName}/>
+                <Header cityName={this.props.userinfo.cityName} history={this.props.history}/>
                 <Swiper/>
                 <SpecialValue/>
                 <GuessYouLike/>

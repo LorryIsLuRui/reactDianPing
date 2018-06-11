@@ -9,22 +9,29 @@ import './index.scss';
 class Header extends Component {
     constructor(){
         super();
+        this.state={
+            inputValue:'',
+        };
     }
     componentDidMount() {
         this.props.userInfoActions.update({cityName:this.props.cityName?this.props.cityName:'西安'});  //update返回action对象
     }
     render() {
-       
-        
         return (
             <div className="container">
-                <Link to={'city'}><span class="header-city-span">{this.props.cityName}</span></Link>
+                <Link to={'city'}><span className="header-city-span">{this.props.cityName}</span></Link>
                 <i className="iconfont icon-jiantou"></i>
-                <input type="text" placeholder="输入商户名、地点"/>
+                <Link to={'search/all'}>
+                    <input type="text" 
+                       placeholder="输入商户名、地点"
+                       defaultValue={this.state.inputValue}
+                    />
+                </Link>
                 <i className="iconfont icon-ren2"></i>
             </div>
         );
     }
+    
 }
 function mapStateToProps(state){
     return {
